@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+  
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+  
+h2 {
+    margin-top: 0;
+    color: #4caf50;
+}
+  
+.input-group {
+    margin-bottom: 10px;
+}
+  
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nome {
+    border-radius: 10px;
+}
+
+.add {
+    border-radius: 10px;
+    color: rgb(0, 255, 106);
+}
+  
+.input-group input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+  
+.input-group button {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calcular {
+    border-radius: 10px;
+    color: #4caf50;
+}
+
+.conta {
+    color: #4caf50;
+}
+  
+.person {
+    margin-bottom: 20px;
+}
+  
+.person h3 {
+    margin-top: 0;
+}
+  
+.product {
+    margin-bottom: 10px;
+}
+  
+.product label {
+    display: block;
+}
+  
+.product input[type="checkbox"] {
+    margin-right: 5px;
+    background-color: #4caf50;
+}
+
+.product input[type="checkbox"]:checked {
+    background-color: #4caf50;
+}
+  
+.calculate-button {
+    margin-top: 20px;
+}
+  
+.result {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+  
+.result h2 {
+    margin-bottom: 10px;
+}
+  
+.result p {
+    margin-top: 0;
+}
+  

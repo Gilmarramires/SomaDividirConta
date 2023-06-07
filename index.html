@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisor de Conta</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <h2>#Somar+Dividir</h2>
+    <div>
+      <label for="nome">Nome da Pessoa:</label>
+      <input type="text" id="nome" v-model="nomePessoa" placeholder="Nome" class="nome">
+      <button @click="adicionarPessoa" class="add">Adicionar</button>
+    </div>
+    <div v-for="(pessoa, index) in pessoas" :key="index">
+      <h3>{{ pessoa.nome }}</h3>
+      <div v-for="(produto, produtoIndex) in produtos" :key="produtoIndex">
+        <label :for="'checkbox-' + index + '-' + produtoIndex">
+          <input type="checkbox" :id="'checkbox-' + index + '-' + produtoIndex" v-model="pessoa.consumos" :value="produto">
+          {{ produto.nome }} (R$ {{ produto.valor }})
+        </label>
+      </div>
+    </div>
+    <button @click="calcularConta" class="calcular">Calcular</button>
+    <div v-if="contaCalculada">
+      <h2 class="conta">Conta a pagar:</h2>
+      <div v-for="(pessoa, index) in pessoas" :key="index">
+        <h3>{{ pessoa.nome }}</h3>
+        <p>Total a Pagar: R$ {{ pessoa.total.toFixed(2) }}</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
